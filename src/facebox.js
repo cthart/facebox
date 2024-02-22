@@ -72,7 +72,7 @@
     if (data.ajax) fillFaceboxFromAjax(data.ajax, klass)
     else if (data.image) fillFaceboxFromImage(data.image, klass)
     else if (data.div) fillFaceboxFromHref(data.div, klass)
-    else if ($.isFunction(data)) data.call($)
+    else if (typeof data === "function") data.call($)
     else $.facebox.reveal(data, klass)
   }
 
